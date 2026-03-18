@@ -4,4 +4,8 @@ build
 .turbo
 .DS_Store
 .env
+.env.*
+!**/.env.sample
+!**/.env.*.sample
+*.tsbuildinfo
 pnpm-lock.yaml
