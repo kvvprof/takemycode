@@ -1,0 +1,39 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "start": "vite preview",
+    "lint": "eslint \"src/**/*.{ts,tsx}\" --fix",
+    "check-types": "tsc -b --noEmit"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@orpc/client": "^1.13.2",
+    "@orpc/contract": "^1.13.2",
+    "@orpc/openapi-client": "^1.13.2",
+    "@orpc/tanstack-query": "^1.13.2",
+    "@tanstack/react-query": "^5.90.16",
+    "@packages/contract": "workspace:*",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-toastify": "^11.0.5",
+    "react-virtuoso": "^4.14.1",
+    "use-debounce": "^10.0.6"
+  },
+  "devDependencies": {
+    "@packages/eslint-config": "workspace:*",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.2",
+    "eslint": "^9.39.2",
+    "typescript": "5.9.3",
+    "vite": "^7.3.0"
+  }
+}

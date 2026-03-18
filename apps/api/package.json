@@ -1,0 +1,36 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k \"pnpm --filter @packages/contract dev\" \"tsx watch --watch-path src --watch-path ../../packages/contract/dist src/main.ts\"",
+    "build": "tsup",
+    "start": "node dist/main.js",
+    "lint": "eslint \"src/**/*.ts\" --fix",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@orpc/openapi": "^1.13.2",
+    "@orpc/server": "^1.13.2",
+    "@packages/contract": "workspace:*",
+    "bottleneck": "^2.19.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "inversify": "^7.10.4",
+    "pino": "^9.14.0",
+    "reflect-metadata": "^0.2.2"
+  },
+  "devDependencies": {
+    "@packages/eslint-config": "workspace:*",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.5",
+    "@types/node": "^24.10.1",
+    "concurrently": "^9.2.1",
+    "eslint": "^9.39.2",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
+    "typescript": "5.9.3"
+  }
+}
